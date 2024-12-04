@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body{ 
+    background-image: url('bg6.jpg'); 
+    background-size: cover; 
+    background-attachment: fixed; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    margin: 0; 
+    font-family: Arial, sans-serif;
+	font-size: 20px;
+    align-items: center;
+	justify-content: center;
+}
+
+ .header {
+    width: 100%;
+    height: 300px;
+    background-image: url('background1.jpg'); 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+		
+.header-title {
+    text-align: center;
+    font-size: 100px;
+    color: white;
+    line-height: 300px;
+    font-weight: bold;
+    font-family: Palatino, serif;
+}
+		
+.nav-bar {
+    background: cadetblue;
+    text-align: center;
+    font-family: "Impact", sans-serif;
+}
+
+ul {
+    display: inline-flex;
+    list-style: none;
+    color: #000;
+}
+
+ul li {
+    position: relative; 
+    margin: 5px;
+    padding: 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    font-size: 17px;
+    color: white;
+    padding: 8px 12px;
+    transition: 0.4s ease;
+    display: inline-block;
+}
+
+ul li a:hover {
+    background-color: lightblue;
+    color: #000;
+    border-radius: 5px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: cadetblue;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background-color: lightblue;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: #9fc4c6;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 50px;
+    margin: 20px auto;
+    max-width: 80%;
+}
+
+.img-profile {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.text-content {
+    text-align: left;
+}
+
+.greet {
+    letter-spacing: 2px;
+    color: azure ;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.description1 {
+    line-height: 1.6;
+    color: white;
+    text-align: justify;
+}
+		
+.fav-section-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    gap: 30px; 
+}
+
+.fav-image {
+    width: 250px;
+    height: 350px; 
+    border-radius: 8px;
+    object-fit: cover; 
+}
+
+.fav-description {
+    background-color: #9fc4c6; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+    max-width: 900px; 
+    text-align: justify;
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.fav-description p {
+    font-size: 20px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.fav-description iframe {
+    width: 50%;
+    height: 150%;
+}
+
+h2 {
+    text-align: center; 
+}
+
+.box-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    gap: 20px;
+    margin: 20px auto;
+    width: 90%; 
+}
+
+.content-box {
+    background-color: #9fc4c6;
+    border: 1px solid #ddd; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 300px;
+    width: 100%; 
+    text-align: center; 
+    overflow: hidden; 
+}
+
+.content-box img {
+    width: 100%; 
+    height: auto;
+    display: block;
+}
+
+.content-box .content {
+    padding: 15px;
+}
+
+.content-box .title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.content-box .description2 {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    text-align: justify; 
+}
+
+.discover {
+    background-color: #568e8f;
+	padding: 10px;
+	text-align: center;
+}
+
+.background {
+    background-color: #9fc4c6;
+	text-align: center;
+	
+}
+
+.family-img {
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    margin: 20px auto;
+    display: block; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+}
+
+.description3 {
+    max-width: 800px; 
+    margin: 15px auto; 
+    text-align: justify; 
+    color: #333; 
+    line-height: 1.8; 
+    font-size: 1.1em; 
+    padding: 10px; 
+    background-image: url('gif5.gif');
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    text-align: center; 
+}
+
+.slide {
+    display: none;
+    text-align: center; 
+}
+
+.slide img {
+    width: 50%; 
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+    transform: translateY(-50%);
+    opacity: 0.5; 
+}
+
+.arrow-left {
+    left: 25%; 
+}
+
+.arrow-right {
+    right: 25%; 
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 1; 
+}
+
+
+
+</style>
+</head>
+<body>
+
+    <div class="header">
+            <div class="header-title">About Me</div>
+    </div>
+	
+	
+	<div class="nav-bar">
+        <ul>
+
+            <li><a href="index.html">HOME</a></li>
+            <li class="dropdown">
+			   <a href="aboutme.html" target="blank">ABOUT ME</a>
+                    <div class="dropdown-content">
+                        <a href="#discover-section">What Aisyah's like</a>
+                        <a href="#family-section"> My Family</a>
+                        <a href="#animals-section">Favourite Animals</a>
+                        <a href="#movie-section">Favourite Movie</a>
+                        <a href="#cartoon-section">Favourite Cartoon</a>
+                        <a href="#map-section">Image Map</a>
+                    </div></li>
+            <li><a href="education.html" target="blank">EDUCATION</a></li>
+            <li><a href="achievement1.html" target="blank">ACHIEVEMENT</a></li>
+            <li><a href="gallery.html" target="blank">GALLERY</a></li>
+            <li><a href="contactme.html">CONTACT</a></li>
+			
+        </ul>
+    </div>
+	
+	
+    <div class="container" >
+        <img class="img-profile" src="gal2.jpg" alt="Nur Aisyah Athirah">
+        <div class="text-content">
+            <p class="greet">HELLO</p>
+            <h3 class="name">
+                I'm <span> Aisyah </span><br>
+            </h3>
+            <p class="description1">
+                Welcome to my website! <br> I'm Aisyah, a creative person with a passion for creating beautiful websites. <br> I have a funny and interesting personality, however some people find me annoying.<br>This year, I turn 20 years old. My birth was on July 23, 2004 at Miri Hospital in Sarawak.</p>
+        </div>
+    </div>
+
+    <section id="discover-section">
+    <font face="Baskerville serif"><h1 class="discover" >Discover what I like !</h2>
+	</font>
+	
+	<br>
+	
+        <div class="box-container">
+            <div class="content-box">
+                <img src="gal27.jpg" alt="Image 1">
+                <div class="content">
+                <div class="title">Marine Life</div>
+                <p class="description2">Seeing marine life calms me, which is why I enjoy it. As in an aquarium, for instance. However, I must admit that I'm terrified of deep water.</p>
+            </div>
+        </div>
+
+            <div class="content-box">
+                <img src="gal45.jpg" alt="Image 2">
+                <div class="content">
+                <div class="title">Clouds</div>
+                <p class="description2">Clouds are something I enjoy seeing. Clouds that constantly change shape but can still cover the bright sun. </p>
+            </div>
+        </div>
+
+  
+            <div class="content-box">
+                <img src="kd.jpg" alt="Image 3">
+                <div class="content">
+                <div class="title">Korean Dramas</div>
+                <p class="description2">I enjoy watching Korean dramas. I watch it every time to relax and clear my head. It also refers to feeling that i will cry if the genre is sad.</p>
+            </div>
+        </div>
+		
+		
+		    <div class="content-box">
+                <img src="cikmak.jpg" alt="Image 4">
+                <div class="content">
+                <div class="title">My Favourite Foods</div>
+                <ul style="list-style-type: circle;">
+				    <li>Nasi Lemak</li>
+				    <li>Bihun Tomyam</li>
+				</ul>
+                </div>
+            </div>
+		
+		    <div class="content-box">
+                <img src="mango.jpg" alt="Image 5">
+                <div class="content">
+                <div class="title">My Favourite Drinks</div>
+                 <ol type="a">
+				    <li>Honeydew</li>
+					<li>Teh O</li>
+					<li>Mango</li>
+				</ol>
+            </div>
+        </div>
+		
+		    <div class="content-box">
+                <img src="music.jpg" alt="Image 6">
+                <div class="content">
+                <div class="title">My Favourite Playlists</div>
+                <div class="audio-container" style="text-align: center; margin-top: 20px;">
+                    <audio controls>
+                    <source src="audio2.mp3" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                    </audio>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<br>
+<br>
+        
+		
+    <section id="family-section">
+		<div class="background">
+    <font face="Baskerville serif"><h1 class="discover">My Family</h1>
+		    <img src="gal11.jpg" alt="Family2" class="family-img" width="400" height="500">
+			<audio controls>
+                    <source src="audio3.mp3" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                    </audio>
+                <p class="description3">This is <b> my family </b> which i adore. I am the second child in a family of six siblings that genuinely care for one another. My father was a former soldier and now owns a barbershop. My mother is a primary school teacher. Futhermore, my oldest sister recently finished her degree at <b> UiTM Segamat </b>. This year, my brother will shortly get his SPM and some are in primary school right now. My youngest brother who is 4 years old still in kindergarten and he is the light of <b> our family </b>. </p><br>
+		</div>
+	</section>
+	
+	
+<br>
+		
+		
+    <section id="animals-section">
+		<font face="Baskerville serif"><h1 class="discover">My Favourite Animals</h1><br>
+            
+        <div class="slideshow-container">
+            <div class="slide">
+                <img src="cat1.jpg" alt="Slide 1">
+        </div>
+		
+        <div class="slide">
+            <img src="cat2.jpg" alt="Slide 2">
+        </div>
+		
+        <div class="slide">
+            <img src="cat8.jpg" alt="Slide 3">
+        </div>
+        
+		<div class="slide">
+            <img src="cat17.jpg" alt="Slide 4">
+        </div>
+		
+		<div class="slide">
+            <img src="cat13.jpg" alt="Slide 5">
+        </div>
+		
+		<div class="slide">
+            <img src="cat16.jpg" alt="Slide 6">
+        </div>
+
+        <button class="arrow arrow-left" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="arrow arrow-right" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+
+
+        <script>
+            let slideIndex = 0;
+            showSlide(slideIndex);
+
+            function showSlide(index) {
+            const slides = document.querySelectorAll('.slide');
+            if (index >= slides.length) {
+            slideIndex = 0;
+            } else if (index < 0) {
+            slideIndex = slides.length - 1;
+            } else {
+            slideIndex = index;
+            }
+
+            slides.forEach((slide, i) => {
+            slide.style.display = (i === slideIndex) ? 'block' : 'none';
+            });
+            }
+
+            function changeSlide(direction) {
+            showSlide(slideIndex + direction);
+            }
+        </script>
+	</section>
+	
+	
+<br>
+
+ 	
+    <section id="movie-section">	
+    <font face="Baskerville serif"><h1 class="discover">My Favourite Movie</h1><br><br>
+        <div class="fav-section-container">
+            <img src="mulan1.jpg" alt="mulan 2020" class="fav-image">
+                <div class="fav-description">
+                <p>Much like the character in the beloved original animated film, Mulan is determined, strong, and compassionate.<br>  When each family has to provide one man to join the battle against the invaders, Mulan takes the place of her father, who suffers from an old war wound. She is completely out of her element at first, but she picks things up quickly and grows into a strong,capable leader while making new friends in the process.</p><br>
+         
+                <p>My <sub> Favourite </sub> Scene : </p> 
+				    <iframe 
+                    width="100" 
+                    height="450" 
+                    src="https://www.youtube.com/embed/g9cK-HNVgJI" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                    </iframe>
+			    </div>
+		</div>
+	</section>
+		
+<br>
+<br>
+
+
+    <section id="cartoon-section">
+    <font face="Baskerville serif"><h1 class="discover">My Favourite Cartoon</h1><br><br>
+        <div class="fav-section-container">
+            <img src="mirabel.jpg" alt="echanto" class="fav-image">
+                <div class="fav-description">
+                <p>Mirabel is a young girl imperfect and weird and quirky, but also deeply emotional and incredibly empathetic. Mirabel is a young girl who may be imperfect and "weird", but is also empathetic and emotional. She's determined to prove that she belongs, denying to everyone, including herself, that she feels all alone even in her own house.</p><br>
+				
+               <p>My <sub>Favourite </sub> Scene:</p>
+                    <iframe 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/_3C69Qeyyq8" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                    </iframe>
+                </div>
+        </div>
+	</section>
+		
+<br>
+  
+    
+    <section id="map-section">
+<center> 
+
+    <font face="Baskerville serif"><h1 class="discover">Image Map</h1><br><br>
+        <img src="imagemap.jpg" usemap="#image-map">
+
+        <map name="image-map">
+        <area target="" alt="GALLERY" title="GALLERY" href="gallery.html" coords="154,167,280,370" shape="rect">
+        <area target="" alt="FAVOURITE PLAYLIST" title="FAVOURITE PLAYLIST" href="https://youtu.be/OqEc_169ywY?si=KsOJ8OzecBgbejxy" coords="154,386,289,543" shape="rect">
+        <area target="" alt="TIKTOK" title="TIKTOK" href="https://www.tiktok.com/foryou?lang=en" coords="302,377,450,543" shape="rect">
+        <area target="" alt="CONTACT" title="CONTACT" href="contactme.html" coords="553,102,401,261" shape="rect">
+</map>
+</center>
+    </section>
+	
+	
+</body>
+</html>
+
+
+     
