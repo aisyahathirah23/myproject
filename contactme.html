@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<style>
+
+body{ 
+    background-image: url('bg15.jpg'); 
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    font-family: Arial, sans-serif; 
+	font-size: 20px;
+}
+
+.nav-bar {
+    background: cadetblue;
+    text-align: center;
+    font-family: "Impact", sans-serif;
+}
+
+ul {
+    display: inline-flex;
+    list-style: none;
+    color: #000;
+}
+
+ul li {
+    position: relative; 
+    margin: 5px;
+    padding: 20px;
+}
+
+ul li a {
+   text-decoration: none;
+   font-size: 17px;
+   color: white;
+   padding: 8px 12px;
+   transition: 0.4s ease;
+   display: inline-block;
+}
+
+ul li a:hover {
+    background-color: lightblue;
+    color: #000;
+    border-radius: 5px;
+}
+		
+.header {
+    width: 100%;
+    height: 300px;
+    background-image: url('background1.jpg'); 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.header-title {
+    text-align: center;
+    font-size: 100px;
+    color: white;
+    line-height: 300px;
+    font-weight: bold;
+    font-family: Palatino, serif; 
+	
+}
+
+.contact {
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.contact .content {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact .content h2 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.contact .content p {
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+.contactInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contactInfo .box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contactInfo .box .icon {
+    min-width: 40px;
+    height: 40px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00bcd4;
+}
+
+.contactInfo .box .text h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #00bcd4;
+}
+
+.contactInfo .box .text p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: black;
+}
+
+.contactForm {
+    flex: 1;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contactForm h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    font-size: 16px;
+}
+
+.contactForm .inputBox span {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    font-size: 16px;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span {
+    color: #00bcd4;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"] {
+    width: auto;
+    background: #00bcd4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.contactInfo .map-container {
+    width: 100%;
+}
+
+.contactInfo .map-container iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+}
+
+</style>
+</head>
+<body>
+
+        <div class="header">
+            <div class="header-overlay">
+                <div class="header-title">Contact Me</div>
+            </div>
+		</div>
+
+	    <div class="nav-bar">
+            <ul>
+
+                <li><a href="index.html" target="blank">HOME</a></li>
+                <li><a href="aboutme.html" target="blank">ABOUT ME</a></li>
+                <li><a href="education.html" target="blank">EDUCATION</a></li>
+                <li><a href="achievement1.html" target="blank">ACHIEVEMENT</a></li>
+			    <li><a href="gallery.html" target="blank">GALLERY</a></li>
+                <li><a href="contactme.html"target="blank">CONTACT</a></li>
+            </ul>
+        </div>
+	  <section class="contact">
+        <div class="content">
+            <h2><ul>Feel free to contact me if you need anything.</ul></h2>
+            
+        </div>
+
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                   
+				   <div class="icon"><i class="fa fa-phone"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>011-14968725</p>
+                    </div>
+                </div>
+				
+                <div class="box">
+                    <div class="icon">
+					<a href="mailto:aisyahzulkanin" target="blank" ><i class="fa fa-envelope"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                    </div>
+                </div>
+				
+                <div class="box">
+                    <div class="icon">
+					<a href="https://wa.me/60148427535" target="_blank"><i class="fa fa-whatsapp"></i></a></div>
+                    <div class="text">
+                        <h3>WhatsApp</h3>
+                    </div>
+                </div>
+				
+                <div class="box">
+                    <div class="icon">
+					<a href="https://www.instagram.com/aisyahathirah_/" target="_blank"><i class="fa fa-instagram"></i></a></div>
+                    <div class="text">
+                        <h3>Instagram</h3>
+                    </div>
+                </div>
+            
+			
+			 
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63778.18051917402!2d102.96542407192109!3d2.4617197055146627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cfd0a535a41211%3A0x32cc543236204219!2sFelda%20Redong%2C%2085300%20Labis%2C%20Johor!5e0!3m2!1sms!2smy!4v1732935081435!5m2!1sms!2smy"
+			allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+            <div class="contactForm">
+                <form>
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Full Name</span>
+                    </div>
+					
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Email</span>
+                    </div>
+					
+                    <div class="inputBox">
+                        <textarea name="" required="required"></textarea>
+                        <span>Type your messages ...</span>
+                    </div>
+					
+                    <div class="inputBox">
+                        <input type="submit" name="" value="Send">
+                    </div>
+					
+                </form>
+            </div>
+        </div>
+    </section>
+	   
+</body>
+</html>
