@@ -69,8 +69,16 @@ ul li a{
    font-family: Palatino, serif; 
    
 }
+
+.clock {
+   text-align: center;
+   font-size: 30px;
+   color: white;
+   font-family: Arial, sans-serif;
+   margin-top: 20px;
+   font-weight: bold;
+}
    
-   <link rel="stylesheet" href="style.css">
 </head>
 </style>
 <body>
@@ -85,7 +93,25 @@ ul li a{
  
  
         </ul>
+      <div id="clock"></div>    
+     <script>
+        function updateClock() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+
+            hours = (hours < 10) ? "0" + hours : hours;
+            minutes = (minutes < 10) ? "0" + minutes : minutes;
+            seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+            var timeString = hours + ":" + minutes + ":" + seconds;
+
+            document.getElementById('clock').textContent = timeString;
+        }
 		
+        setInterval(updateClock, 1000);
+    </script>	
     </div>
 <div class="text-box">
     <h1>Welcome to My Website !</h1>
